@@ -14,13 +14,13 @@ AI twin application deployed on AWS with a static frontend, serverless backend, 
 ```mermaid
 flowchart LR
     U[User] --> CF[Amazon CloudFront]
-    CF --> S3FE[Amazon S3\nStatic Frontend]
+    CF --> S3FE[Amazon S3 - Static Frontend]
 
     U --> APIGW[Amazon API Gateway]
     APIGW --> L[AWS Lambda Backend]
 
-    L --> C[Cerebras Provider\ngpt-oss-120b]
-    L <--> S3MEM[Amazon S3\nChat Memory]
+    L --> C[Cerebras Provider - gpt-oss-120b]
+    L <--> S3MEM[Amazon S3 - Chat Memory]
 
     S3FE -. serves assets via .-> CF
 ```
