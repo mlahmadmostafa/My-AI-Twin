@@ -41,7 +41,7 @@ export default function Twin() {
         setIsLoading(true);
 
         try {
-            const response = await fetch('https://e0si3ki4o4.execute-api.eu-central-1.amazonaws.com/chat', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

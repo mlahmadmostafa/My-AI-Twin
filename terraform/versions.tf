@@ -9,11 +9,9 @@ terraform {
   }
 }
 
-provider "aws" {
-  # Uses AWS CLI configuration (aws configure)
-}
+
 
 provider "aws" {
-  alias  = "eu-central_1"
+  alias  = "eu_central_1"
   region = "eu-central-1"
 }
